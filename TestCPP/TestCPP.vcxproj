@@ -83,6 +83,8 @@
     <ClCompile Include="Duree.cpp" />
     <ClCompile Include="Guerrier.cpp" />
     <ClCompile Include="Magicien.cpp" />
+    <ClCompile Include="MagicienBlanc.cpp" />
+    <ClCompile Include="MagicienNoir.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Personnage.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -92,6 +94,8 @@
     <ClInclude Include="Duree.h" />
     <ClInclude Include="Guerrier.h" />
     <ClInclude Include="Magicien.h" />
+    <ClInclude Include="MagicienBlanc.h" />
+    <ClInclude Include="MagicienNoir.h" />
     <ClInclude Include="Personnage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -10,6 +10,7 @@ class Personnage
 public:
 
 	Personnage();
+	Personnage(std::string nom);
 	Personnage(std::string nomArme, int degatsArme);
 	Personnage(Personnage const& personnageACopier);
 	Personnage& operator=(Personnage const& personnageACopier);
@@ -20,15 +21,21 @@ public:
 	bool estVivant() const;
 	void maMethode(int parametre) const;
 	void afficherEtat() const;
+	void sePresenter() const;
 	~Personnage();
 
-private:
+protected:
 
 	int m_vie;
+	std::string m_nom;
 	int m_mana;
 	//std::string m_nomArme; //Pas de using namespace std, il faut donc mettrestd:: devant string
 	//int m_degatsArme;
 	Arme *m_arme;
+
+private: 
+
+
 };
 
 #endif

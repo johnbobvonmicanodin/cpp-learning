@@ -13,6 +13,8 @@ public:
 	Guerrier();
 	~Guerrier();
 	void frapperCommeUnSourdAvecUnMarteau() const;
+	void coupDePoing(Personnage &cible) const;
+	void sePresenter() const;
 };
 
 #endif

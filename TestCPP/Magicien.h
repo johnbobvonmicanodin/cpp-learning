@@ -9,9 +9,10 @@ class Magicien : public Personnage
 {
 public:
 	Magicien();
+	Magicien(std::string nom);
 	~Magicien();
-	void bouleDeFeu() const;
-	void bouleDeGlace() const;
+	void bouleDeFeu(Personnage &cible) const;
+	void bouleDeGlace(Personnage &cible) const;
 
 private:
 	int m_mana;

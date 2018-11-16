@@ -6,6 +6,7 @@
 #include <ctime> 
 #include <cstdlib> 
 #include "Personnage.h"
+#include "Magicien.h"
 #include "Duree.h"
 
 using namespace std; //espace de noms 
@@ -29,7 +30,7 @@ pointeur = 0;
 
 int main()
 {
-	/*Personnage david, goliath("épée de la mort qui tue", 25);
+	Personnage david("David"), goliath("epée de la mort qui tue", 25);
 
 	//Personnage david(goliath); constructeur de copie modifiable si redeclare dans h et dans cpp
 
@@ -37,15 +38,25 @@ int main()
 	david.boirePotionDeVie(2); //david récupère 20 de vie en buvant une potion
 	goliath.attaquer(david); //goliath réattaque david
 	david.attaquer(goliath); //david contre-attaque... c'est assez clair non ? 
-	goliath.changerArme("Double hache tranchante vénéneuse de la mort", 40);
+	goliath.changerArme("Double hache tranchante veneneuse de la mort", 40);
 	goliath.attaquer(david);
 
 	cout << "David" << endl;
 	david.afficherEtat();
 	cout << endl << "Goliath" << endl;
-	goliath.afficherEtat();*/
+	goliath.afficherEtat();
 
-	Duree duree1(0, 10, 42), duree2(0, 53, 27);
+	Magicien gandalf("Gandalf");
+	gandalf.bouleDeFeu(goliath);
+
+	cout << endl << "Goliath" << endl;
+	goliath.afficherEtat();
+
+	gandalf.sePresenter();
+
+	david.sePresenter();
+
+	/*Duree duree1(0, 10, 42), duree2(0, 53, 27);
 	Duree resultat;
 
 	duree1.afficher();
@@ -55,7 +66,7 @@ int main()
 	resultat = duree1 + duree2;
 
 	cout << "=" << endl;
-	resultat.afficher();
+	resultat.afficher();*/
 
 	return 0;
 

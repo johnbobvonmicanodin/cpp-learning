@@ -11,6 +11,11 @@ Personnage::Personnage() : m_vie(100), m_mana(100), m_arme(0)
 	m_arme = new Arme();
 }
 
+Personnage::Personnage(string nom) : m_vie(100), m_nom(nom)
+{
+	m_arme = new Arme();
+}
+
 Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_mana(100), m_arme(0)
 {
 	m_arme = new Arme(nomArme, degatsArme);
@@ -80,6 +85,12 @@ void Personnage::afficherEtat() const
 	cout << "Vie : " << m_vie << endl;
 	cout << "Mana : " << m_mana << endl;
 	m_arme->afficher();
+}
+
+void Personnage::sePresenter() const
+{
+	cout << "Bonjour, je m'appelle " << m_nom << "." << endl;
+	cout << "J'ai encore " << m_vie << " points de vie." << endl;
 }
 
 Personnage::~Personnage()
